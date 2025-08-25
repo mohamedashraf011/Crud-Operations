@@ -1,0 +1,151 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #181C14, #2C3930);
+  color: #ECDFCC;
+  line-height: 1.6;
+}
+
+section.info {
+  background: rgba(63, 79, 68, 0.95);
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  border: 1px solid #A27B5C;
+  backdrop-filter: blur(8px);
+}
+
+section.info h2 {
+  font-weight: 700;
+  color: #DCD7C9;
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+section.info h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #A27B5C;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.form-floating .form-control {
+  border-radius: 14px;
+  border: 1px solid #A27B5C;
+  background: #fdfcfb;
+  color: #2C3930;
+  transition: 0.3s ease;
+}
+
+.form-floating label {
+  color: #3F4F44;
+  font-weight: 500;
+}
+
+.form-floating .form-control:focus {
+  border-color: #3F4F44;
+  background: #fff;
+  box-shadow: 0 0 14px rgba(162,123,92,0.35);
+  transform: scale(1.02);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3F4F44, #2C3930);
+  border: none;
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-weight: 600;
+  color: #DCD7C9;
+  transition: all 0.35s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #2C3930, #181C14);
+  box-shadow: 0 8px 20px rgba(44,57,48,0.4);
+  transform: translateY(-3px) scale(1.05);
+}
+
+input[type="search"] {
+  border-radius: 35px;
+  border: 1px solid #A27B5C;
+  padding: 12px 22px;
+  background: #fdfcfb;
+  color: #2C3930;
+  transition: 0.3s ease;
+}
+
+input[type="search"]:focus {
+  border-color: #3F4F44;
+  background: #fff;
+  box-shadow: 0 0 14px rgba(162,123,92,0.35);
+  transform: scale(1.02);
+}
+
+.my-card .inner {
+  background: #fff;
+  border-radius: 18px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  border: 1px solid #DCD7C9;
+  overflow: hidden;
+  position: relative;
+}
+
+.my-card .inner:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+}
+
+.my-card img {
+  height: 280px;
+  object-fit: cover;
+  border-bottom: 1px solid #DCD7C9;
+  transition: transform 0.45s ease;
+}
+
+.my-card:hover img {
+  transform: scale(1.08);
+}
+
+/* 📑 Card Content */
+.my-card h5 {
+  font-weight: 600;
+  color: #3F4F44;
+}
+
+.my-card p {
+  margin: 6px 0;
+  color: #2C3930;
+  font-size: 0.95rem;
+}
+
+/* 🏷️ Badge */
+.my-card .badge {
+  font-size: 0.8rem;
+  background: linear-gradient(135deg, #A27B5C, #8e664d);
+  color: #fff;
+  border-radius: 10px;
+  padding: 5px 10px;
+  box-shadow: 0 3px 8px rgba(162,123,92,0.4);
+}
+
+/* ✨ Card Buttons */
+.my-card button {
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  border: 1px solid #3F4F44;
+  color: #3F4F44;
+  padding: 8px 20px;
+  font-weight: 500;
+}
+
+.my-card button:hover {
+  background: #3F4F44;
+  color: #DCD7C9;
+  transform: scale(1.08);
+  box-shadow: 0 6px 14px rgba(47,63,56,0.3);
+}
