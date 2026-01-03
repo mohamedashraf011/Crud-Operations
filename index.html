@@ -15,9 +15,88 @@
     <link rel="stylesheet" href="css/media.css" />
 </head>
 
+
+<div class="modal fade" id="updateModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content model">
+
+        <div class="modal-header">
+        <h5 class="modal-title update-title">Update Product</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+
+        <div class="form-floating mb-3">
+            <input oninput="validate(uName, nameRegex, 'uNameError')"
+                    type="text"
+                    class="form-control"
+                    id="uName"
+                    placeholder="">
+            <label for="uName">Product Name</label>
+        </div>
+        <p id="uNameError" class="alert alert-danger d-none">
+            Name must start with capital letter and be 3–16 characters.
+        </p>
+
+        <div class="form-floating mb-3">
+            <input oninput="validate(uPrice, priceRegex, 'uPriceError')"
+                    type="number"
+                    class="form-control"
+                    id="uPrice"
+                    placeholder="">
+            <label for="uPrice">Product Price</label>
+        </div>
+        <p id="uPriceError" class="alert alert-danger d-none">
+            Price must be 3–9 digits and not start with zero.
+        </p>
+
+        <div class="form-floating mb-3">
+            <input oninput="validate(uCategory, categoryRegex, 'uCategoryError')"
+                    type="text"
+                    class="form-control"
+                    id="uCategory"
+                    placeholder="">
+            <label for="uCategory">Product Category</label>
+        </div>
+        <p id="uCategoryError" class="alert alert-danger d-none">
+            Category must start with capital letter.
+        </p>
+
+        <div class="form-floating mb-3">
+            <textarea oninput="validate(uDesc, descRegex, 'uDescError')"
+                    style="height: 100px"
+                    class="form-control"
+                    id="uDesc"
+                    placeholder=""></textarea>
+            <label for="uDesc">Product Description</label>
+        </div>
+        <p id="uDescError" class="alert alert-danger d-none">
+            Description must contain at least one letter.
+        </p>
+
+        <div class="form-floating mb-3">
+            <input type="file" class="form-control" id="uImage">
+            <label for="uImage">Product Image</label>
+        </div>
+
+        </div>
+
+        <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button onclick="updateProduct()" class="btn btn-dark">
+            Save Changes
+        </button>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
 <body>
 
-    <section class="info w-75 mx-auto p-3 rounded-3">
+    <section class="info w-75 mx-auto p-6 rounded-3">
         <h2 class="text-center">Crud Operations</h2>
 
         <div class="form-floating mb-3">
@@ -58,7 +137,7 @@
             <label for="productImage">Product Image</label>
         </div>
 
-        <button onclick="addProduct()" class="btn btn-primary">Add Product</button>
+        <button id="addBtn" onclick="addProduct()" class="btn btn-primary">Add Product</button>
 
     </section>
 
@@ -70,7 +149,6 @@
             <input id="productSearch" oninput="searchProduct()" type="search" class="form-control w-50 mx-auto my-3" placeholder="Search...">
 
             <div id="rowData" class="row g-3">
-
 
             </div>
         </div>

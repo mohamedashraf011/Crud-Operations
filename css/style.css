@@ -5,6 +5,23 @@ body {
   line-height: 1.6;
 }
 
+.model{
+  background: rgba(63, 79, 68, 0.95);
+  border-radius: 20px;
+  padding: 8px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  border: 1px solid #A27B5C;
+  backdrop-filter: blur(8px);
+}
+
+.update-title {
+  font-weight: 700;
+  color: #DCD7C9;
+  text-align: center;
+  letter-spacing: 1px;
+  position: relative;
+}
+
 section.info {
   background: rgba(63, 79, 68, 0.95);
   border-radius: 20px;
@@ -12,6 +29,7 @@ section.info {
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
   border: 1px solid #A27B5C;
   backdrop-filter: blur(8px);
+  margin-top: 45px;
 }
 
 section.info h2 {
@@ -93,6 +111,7 @@ input[type="search"]:focus {
   border: 1px solid #DCD7C9;
   overflow: hidden;
   position: relative;
+  margin-top: 30px;
 }
 
 .my-card .inner:hover {
@@ -111,7 +130,6 @@ input[type="search"]:focus {
   transform: scale(1.08);
 }
 
-/* 📑 Card Content */
 .my-card h5 {
   font-weight: 600;
   color: #3F4F44;
@@ -123,7 +141,6 @@ input[type="search"]:focus {
   font-size: 0.95rem;
 }
 
-/* 🏷️ Badge */
 .my-card .badge {
   font-size: 0.8rem;
   background: linear-gradient(135deg, #A27B5C, #8e664d);
@@ -133,7 +150,6 @@ input[type="search"]:focus {
   box-shadow: 0 3px 8px rgba(162,123,92,0.4);
 }
 
-/* ✨ Card Buttons */
 .my-card button {
   border-radius: 25px;
   transition: all 0.3s ease;
